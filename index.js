@@ -14,18 +14,18 @@ const TIMEOUT = 8000;
 module.exports = function (homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerAccessory("homebridge-vsx", "VSX", VSX);
+  homebridge.registerAccessory("homebridge-vsx-2", "VSX", VSX);
 };
 
 function VSX(log, config) {
   this.log = log;
   this.name = config.name;
   this.ip = config.ip;
-  this.port = config.port;
+  this.port = parseInt(config.port);
   this.input = config.input;
   this.timeout = TIMEOUT;
   if (config.timeout !== undefined) {
-    this.timeout = config.timeout;
+    this.timeout = parseInt(config.timeout);
   }
 }
 
