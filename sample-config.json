@@ -33,7 +33,7 @@
             "name": "Receiver XYZ",
             "port": 23,
             "input": "18",
-            "timeout": "8000"
+            "timeout": 8000
         }
 
     ]
